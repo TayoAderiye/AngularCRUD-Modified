@@ -1,0 +1,279 @@
+{
+  "employees": [
+    {
+      "userId": 6,
+      "firstName": "Joseph",
+      "lastName": "Pettyfer",
+      "email": "jpettyfer5@oaic.gov.au",
+      "status": "Inactive",
+      "gender": "Male",
+      "leave": [
+        {
+          "fromDate": "2021-07-16",
+          "toDate": "2021-08-06",
+          "reason": "I am Pregant",
+          "status": "Pending",
+          "id": 1
+        },
+        {
+          "fromDate": "2021-07-16",
+          "toDate": "2021-08-06",
+          "reason": "I hate this wowrk",
+          "status": "Pending",
+          "id": 2
+        },
+        {
+          "fromDate": "2021-07-09",
+          "toDate": "2021-07-23",
+          "reason": "sadfghjkjlk;l;ljfj",
+          "status": "Pending",
+          "id": 15
+        }
+      ],
+      "id": 6
+    },
+    {
+      "userId": 8,
+      "firstName": "Laurianne",
+      "lastName": "Simondson",
+      "email": "lsimondson7@homestead.com",
+      "status": "Inactive",
+      "gender": "Female",
+      "leave": [
+        {
+          "fromDate": "2021-07-30",
+          "toDate": "2021-07-30",
+          "reason": "assfdgbf",
+          "status": "Pending",
+          "id": 7
+        },
+        {
+          "fromDate": "2021-07-30",
+          "toDate": "2021-08-06",
+          "reason": "asdsvc",
+          "status": "Pending",
+          "id": 8
+        },
+        {
+          "fromDate": "2021-07-30",
+          "toDate": "2021-07-31",
+          "reason": "asdsf",
+          "status": "Pending",
+          "id": 9
+        },
+        {
+          "fromDate": "2021-07-13",
+          "toDate": "2021-07-24",
+          "reason": "QD",
+          "status": "Pending",
+          "id": 10
+        },
+        {
+          "fromDate": "2021-07-24",
+          "toDate": "2021-08-07",
+          "reason": "AQSDFBVB ",
+          "status": "Pending",
+          "id": 11
+        },
+        {
+          "fromDate": "2021-07-15",
+          "toDate": "2021-07-31",
+          "reason": "df",
+          "status": "Pending",
+          "id": 12
+        },
+        {
+          "fromDate": "2021-07-22",
+          "toDate": "2021-08-07",
+          "reason": "xc",
+          "status": "Pending",
+          "id": 13
+        },
+        {
+          "fromDate": "2021-07-15",
+          "toDate": "2021-08-07",
+          "reason": "f",
+          "status": "Pending",
+          "id": 14
+        }
+      ],
+      "id": 8
+    },
+    {
+      "userId": 12,
+      "firstName": "dsd",
+      "lastName": "jakintayo1@gmail.com",
+      "email": "jakintayo1@gmail.com",
+      "status": "Inactive",
+      "gender": "Female",
+      "leave": [
+        {
+          "fromDate": "2021-07-02",
+          "toDate": "2021-07-23",
+          "reason": "cSADwf",
+          "status": "Pending",
+          "id": 4
+        },
+        {
+          "fromDate": "2021-07-08",
+          "toDate": "2021-07-31",
+          "reason": "dsfafa",
+          "status": "Pending",
+          "id": 5
+        },
+        {
+          "fromDate": "2021-07-31",
+          "toDate": "2021-07-31",
+          "reason": ",,",
+          "status": "Pending",
+          "id": 6
+        }
+      ],
+      "id": 12
+    },
+    {
+      "userId": 13,
+      "firstName": "4TFEWF",
+      "lastName": "QERFQ",
+      "email": "ARFQR",
+      "status": "Active",
+      "gender": "Male",
+      "leave": [
+        {
+          "fromDate": "2021-07-01",
+          "toDate": "2021-07-31",
+          "reason": "dacfs",
+          "status": "Pending",
+          "id": 3
+        }
+      ],
+      "id": 13
+    },
+    {
+      "firstName": "tayo",
+      "lastName": "efaf",
+      "email": "ihfia@gmvs.com",
+      "status": "Active",
+      "gender": "Female",
+      "leave": [],
+      "id": 14
+    },
+    {
+      "userId": 15,
+      "firstName": "gfef",
+      "lastName": "jakintayo1@gmail.com",
+      "email": "jakintayo1@gmail.com",
+      "status": "Active",
+      "gender": "Male",
+      "leave": [],
+      "id": 15
+    }
+  ],
+  "leave": [
+    {
+      "fromDate": "2021-07-16",
+      "toDate": "2021-08-06",
+      "reason": "I am Pregant",
+      "status": "Pending",
+      "id": 1
+    },
+    {
+      "fromDate": "2021-07-16",
+      "toDate": "2021-08-06",
+      "reason": "I hate this wowrk",
+      "status": "Pending",
+      "id": 2
+    },
+    {
+      "fromDate": "2021-07-01",
+      "toDate": "2021-07-31",
+      "reason": "dacfs",
+      "status": "Pending",
+      "id": 3
+    },
+    {
+      "fromDate": "2021-07-02",
+      "toDate": "2021-07-23",
+      "reason": "cSADwf",
+      "status": "Pending",
+      "id": 4
+    },
+    {
+      "fromDate": "2021-07-08",
+      "toDate": "2021-07-31",
+      "reason": "dsfafa",
+      "status": "Pending",
+      "id": 5
+    },
+    {
+      "fromDate": "2021-07-31",
+      "toDate": "2021-07-31",
+      "reason": ",,",
+      "status": "Pending",
+      "id": 6
+    },
+    {
+      "fromDate": "2021-07-30",
+      "toDate": "2021-07-30",
+      "reason": "assfdgbf",
+      "status": "Pending",
+      "id": 7
+    },
+    {
+      "fromDate": "2021-07-30",
+      "toDate": "2021-08-06",
+      "reason": "asdsvc",
+      "status": "Pending",
+      "id": 8
+    },
+    {
+      "fromDate": "2021-07-30",
+      "toDate": "2021-07-31",
+      "reason": "asdsf",
+      "status": "Pending",
+      "id": 9
+    },
+    {
+      "fromDate": "2021-07-13",
+      "toDate": "2021-07-24",
+      "reason": "QD",
+      "status": "Pending",
+      "id": 10
+    },
+    {
+      "fromDate": "2021-07-24",
+      "toDate": "2021-08-07",
+      "reason": "AQSDFBVB ",
+      "status": "Pending",
+      "id": 11
+    },
+    {
+      "fromDate": "2021-07-15",
+      "toDate": "2021-07-31",
+      "reason": "df",
+      "status": "Pending",
+      "id": 12
+    },
+    {
+      "fromDate": "2021-07-22",
+      "toDate": "2021-08-07",
+      "reason": "xc",
+      "status": "Pending",
+      "id": 13
+    },
+    {
+      "fromDate": "2021-07-15",
+      "toDate": "2021-08-07",
+      "reason": "f",
+      "status": "Pending",
+      "id": 14
+    },
+    {
+      "fromDate": "2021-07-09",
+      "toDate": "2021-07-23",
+      "reason": "sadfghjkjlk;l;ljfj",
+      "status": "Pending",
+      "id": 15
+    }
+  ]
+}

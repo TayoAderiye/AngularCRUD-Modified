@@ -1,0 +1,134 @@
+<div class="row justify-content-center mt-5">
+
+
+
+  <div class="col-md-4">
+    <form [formGroup]="updateForm" (ngSubmit)="onUpdate()">
+      <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">UserId</label>
+        <!-- <input type="text" formControlName="userId" [(ngModel)]="theId" class="form-control" id="exampleInputPassword1"> -->
+        <input type="text" formControlName="userId"  class="form-control" id="exampleInputPassword1">
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">First Name</label>
+        <input type="text" formControlName="firstName" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Last Name</label>
+        <input type="text" formControlName="lastName"class="form-control" id="exampleInputPassword1">
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Email</label>
+        <input type="text" formControlName="email" class="form-control" id="exampleInputPassword1">
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Gender</label>
+        <select type="text" formControlName="gender" class="form-control">
+          <option>Male</option>
+          <option>Female</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="sel1">Status</label>
+        <select type="text" formControlName="status" class="form-control">
+          <option>Active</option>
+          <option>Inactive</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <button class="btn btn-primary btn-block" type="submit">Update</button>
+      </div>
+    </form>
+     <!-- Button trigger modal -->
+     <button type="button" (click)="getEmployeeId()" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+      Initiate Leave
+      </button>
+
+
+  </div>
+  <div class= "col-md-2">
+    <!-- {{ getLeaveOfEmployee() }} -->
+    <table class="table mt-3">
+      <thead>
+        <tr>
+          <th scope="col">From</th>
+          <th scope="col">To</th>
+          <th scope="col">Reason</th>
+          <th scope="col">Status</th>
+        </tr>
+      </thead>
+      <tbody  *ngIf="filledLeave" >
+        <tr *ngFor="let list of currentEmpl" >
+          <td>{{list.fromDate}}</td>
+          <td>{{list.toDate}}</td>
+          <td>{{list.reason}}</td>
+          <td  [ngStyle]="{'color': (list.status === 'Approved') ? 'green' :  'red' }">{{list.status}}</td>
+          <td>
+          </td>
+        </tr>
+      </tbody>
+      <tbody *ngIf="emptyLeave">
+
+      </tbody>
+    </table>
+
+    <button type="button"  (click)="getLeaveOfEmployee()" class="btn btn-primary">View Leave</button>
+    <button type="button" (click)="closeLeave()"  class="btn btn-primary">Close</button>
+  </div>
+
+  <!-- <div class="col-md-2">
+    <h6 *ngFor="let list of loopingAll"> {{ list.reason }} </h6>
+  </div>
+</div> -->
+
+
+
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Create Leave for User</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form [formGroup]="formValue" >
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">From</label>
+
+            <input type="date" formControlName="fromDate" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">To</label>
+            <input type="date" formControlName="toDate"class="form-control" id="exampleInputPassword1">
+          </div>
+          <!-- <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Reason</label>
+            <input type="text" formControlName="reason" class="form-control" id="exampleInputPassword1">
+          </div> -->
+          <div class="form-group">
+            <label for="exampleFormControlTextarea2">Reason</label>
+            <textarea class="form-control rounded-0" formControlName="reason" id="exampleFormControlTextarea2" rows="3"></textarea>
+            <!-- <input type="text" formControlName="reason" class="form-control" id="exampleInputPassword1"> -->
+          </div>
+          <div class="form-group">
+            <label for="sel1">Status</label>
+            <select type="text" formControlName="status" class="form-control">
+              <option>Pending</option>
+              <option>Approved</option>
+            </select>
+          </div>
+      </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" id="cancel" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button"  [disabled]="!formValue.valid" (click)="createLeavee()" class="btn btn-primary">Create Leave</button>
+      </div>
+    </div>
+  </div>
+</div>

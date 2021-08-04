@@ -1,0 +1,91 @@
+
+<div class="container">
+  <div id="search">
+    <input [(ngModel)]="sortingName"  (input)="SearchByName()" class="form-control mt-3"  id="search-text" type="text"  placeholder="Search with First Name or Last Name" aria-label="Search"/>
+    <select [(ngModel)]="status" name="" id="select">
+      <option></option>
+      <option  value="Active">Active</option>
+      <option value="Inactive">Inactive</option>
+    </select>
+    <select [(ngModel)]="gender" name="" id="select">
+      <option></option>
+      <option  value="Male">Male</option>
+      <option value="Female">Female</option>
+    </select>
+  </div>
+
+
+<div class="container">
+  <table class="table mt-3">
+    <thead>
+      <tr>
+        <th scope="col">id</th>
+        <th scope="col">Full Name</th>
+        <th scope="col">Email</th>
+        <th scope="col">Gender</th>
+        <th scope="col">Status</th>
+        <th scope="col">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let employee of employees | filter: gender | filter: status">
+        <td>{{employee.id}}</td>
+        <td>{{employee.firstName}} {{employee.lastName}}</td>
+        <td>{{employee.email}}</td>
+        <td>{{employee.gender}}</td>
+        <td  [ngStyle]="{'color': (employee.status === 'Active') ? 'green' :  'red' }">{{employee.status}}</td>
+        <td>
+          <button (click)="onEdit2(employee)"  class="btn btn-info" type="button">Edit</button>
+          <button  (click)="deleteEmployee(employee)"class="btn btn-danger mx-3">Delete</button>
+           <!-- Button trigger modal -->
+          <!-- <button type="button" (click)="getEmployeeId(employee.id)"class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            Initiate Leave
+            </button> -->
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+
+
+<!-- Modal -->
+ <!-- <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Create Leave for User</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form [formGroup]="formValue" >
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">From</label>
+
+            <input type="date" formControlName="fromDate" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">To</label>
+            <input type="date" formControlName="toDate"class="form-control" id="exampleInputPassword1">
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Reason</label>
+            <input type="text" formControlName="reason" class="form-control" id="exampleInputPassword1">
+          </div>
+          <div class="form-group">
+            <label for="sel1">Status</label>
+            <select type="text" formControlName="status" class="form-control">
+              <option>Pending</option>
+              <option>Approved</option>
+            </select>
+          </div>
+      </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" id="cancel" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button"  [disabled]="!formValue.valid" (click)="createLeave()" class="btn btn-primary">Create Leave</button>
+      </div>
+    </div>
+  </div>
+</div> -->

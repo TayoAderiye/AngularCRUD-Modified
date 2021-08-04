@@ -1,0 +1,10 @@
+#search-text {
+  width: 400px;
+}
+#search {
+  display: flex;
+  flex-direction: row;
+}
+#select {
+  padding: right;
+}
